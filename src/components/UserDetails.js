@@ -17,7 +17,7 @@ class UserDetails extends Component {
 		if (lastName === '') errors.lastName = "Last Name can't be empty";
 		if (email === '') errors.email = "Email can't be empty";
 		this.setState({errors})
-		if (Object.keys(errors).length == 0) {
+		if (Object.keys(errors).length === 0) {
 			return true;
 		}else{
 			return false;
@@ -27,7 +27,6 @@ class UserDetails extends Component {
 	saveAndContinue = (e) =>{
 		e.preventDefault()
 		let isChecked = this.checkPresenceOfField();
-		console.log("is cheked--", isChecked)
 		if (isChecked) {
 			this.props.nextStep();
 		}
