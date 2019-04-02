@@ -37,7 +37,9 @@ class UserForm extends Component {
 			case 3:
 				return (<Confirmation values = {values} handleChange={this.handleChange} />)
 			case 4:		
-				return (<Success />)	
+				return (<Success />)
+			default:
+            return null
 			
 		}			
 	}
