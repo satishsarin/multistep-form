@@ -24,7 +24,7 @@ export default function mformReducer (state = INITIAL_STATE, action) {
 				step: state.step - 1
 			})
 		case UPDATE_INPUT:
-			return Object.assign({}, state, updatedVal);	
+			return {...INITIAL_STATE, ...updatedVal}
 		default:
 			return state;
 	}

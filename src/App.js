@@ -9,11 +9,11 @@ import store from "./store/index";
 class App extends Component {
   render() {
     return (
-    	<Provider store = {store}>
-	      <Container textAlign='center'>
+	    <Container textAlign='center'>
+    		<Provider store = {store}>
 	      	<UserForm />
-	      </Container>
-	    </Provider>  
+	    	</Provider>  
+	    </Container>
     );
   }
 }

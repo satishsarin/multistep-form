@@ -3,14 +3,22 @@ import { shallow } from 'enzyme';
 import App from './App';
 import UserForm from './components/UserForm';
 
-describe('<App/>', () => {
+const setUp = (props = {}) => {
+	const component = shallow(<App/>);
+	return component;
+}
 
-	it('renders without crashing', () => {
-	  shallow(<App />);
+describe('<App/>', () => {
+	let component;
+	beforeEach(() => {
+		component = setUp();
+	})
+
+	it('should render without crashing', () => {
+	  component;
 	});
 
-	it('render one <userForm/> compoenent', () => {
-	  const component = shallow(<App />);
+	it('should render one <userForm/> compoenent', () => {
 	  expect(component.find(UserForm)).toHaveLength(1);
 	});
 

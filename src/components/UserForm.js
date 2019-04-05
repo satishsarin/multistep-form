@@ -27,9 +27,9 @@ class UserForm extends Component {
 
 	render(){
 		const {step, firstName, lastName, email, age, city, country} = this.props.inputData;
-		const values = { firstName, lastName, email, age, city, country };
+		const values = { step, firstName, lastName, email, age, city, country };
 
-		switch(step){
+		switch(values.step){
 			case 1:
 				return (<UserDetails values = {values}  handleChange={this.handleChange} />)
 			case 2:
@@ -39,7 +39,7 @@ class UserForm extends Component {
 			case 4:		
 				return (<Success />)
 			default:
-            return null
+        return null
 			
 		}			
 	}
