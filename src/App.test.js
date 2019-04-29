@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
 import UserForm from './components/UserForm';
+import {testStore} from './utils'
 
 const setUp = (props = {}) => {
 	const component = shallow(<App/>);
@@ -15,7 +16,7 @@ describe('<App/>', () => {
 	})
 
 	it('should render without crashing', () => {
-	  component;
+	  expect(component.exists()).toBe(true);
 	});
 
 	it('should render one <userForm/> compoenent', () => {
